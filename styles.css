@@ -1,0 +1,329 @@
+body {
+    font-family: 'Segoe UI', 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #111;
+    color: #fff;
+}
+
+header {
+    background: #000;
+    color: #fff;
+    padding: 32px 0 24px 0;
+    text-align: center;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.25);
+    letter-spacing: 2px;
+}
+
+.logo-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+}
+
+.logo {
+    position: relative;
+    width: 72px;
+    height: 72px;
+    background: linear-gradient(135deg, #000 60%, #222 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 16px #000a, 0 2px 12px #fff1;
+    border: none; /* Remove the white circle border */
+    transition: box-shadow 0.2s;
+    overflow: visible;
+}
+.logo::after {
+    content: "";
+    position: absolute;
+    top: -7px;
+    left: -7px;
+    width: 86px;
+    height: 86px;
+    border-radius: 50%;
+    border: 2.5px solid #fff; /* Change yellow circle to white */
+    box-shadow: 0 0 12px #fff8;
+    pointer-events: none;
+    z-index: 0;
+}
+.logo span {
+    position: relative;
+    z-index: 1;
+    color: #fff;
+    font-size: 2.6rem;
+    font-weight: 900;
+    font-family: 'Segoe UI', 'Arial', sans-serif;
+    letter-spacing: -2px;
+    text-shadow: 0 2px 8px #0008, 0 1px 0 #fff4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    /* Add a gold gradient to the letter for a unique touch */
+    background: linear-gradient(90deg, #fff 60%, #ffd700 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-transform: uppercase; /* Make the C uppercase */
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-shadow: 0 2px 8px #00000055;
+    color: #fff;
+}
+
+header p {
+    color: #fff;
+    margin-top: 8px;
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+.container {
+    width: 85%;
+    margin: 32px auto;
+    overflow: hidden;
+}
+
+#filters {
+    background: #181818;
+    border-radius: 12px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.18);
+    border: 1px solid #fff2;
+    margin: 24px 0;
+    padding: 18px 24px;
+}
+
+#filters label, #filters select, #filters input {
+    color: #fff;
+    font-weight: 500;
+}
+
+#filters select, #filters input {
+    background: #222;
+    border: 1px solid #fff2;
+    border-radius: 6px;
+    padding: 6px 10px;
+    margin: 0 8px 0 0;
+}
+
+button {
+    background: linear-gradient(90deg, #fff 0%, #eaeaea 100%);
+    color: #000;
+    border: none;
+    padding: 12px 22px;
+    cursor: pointer;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 1rem;
+    box-shadow: 0 2px 8px #fff2;
+    transition: background 0.2s, color 0.2s;
+}
+
+button:hover {
+    background: linear-gradient(90deg, #eaeaea 0%, #fff 100%);
+    color: #111;
+}
+
+.product {
+    background: #181818;
+    border: 1px solid #fff2;
+    border-radius: 12px;
+    margin: 18px 0;
+    padding: 22px 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.12);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.product:hover {
+    transform: translateY(-4px) scale(1.01);
+    box-shadow: 0 8px 32px #fff1, 0 2px 16px rgba(0,0,0,0.18);
+    border-color: #fff6;
+}
+
+.product img {
+    max-width: 100px;
+    max-height: 100px;
+    border-radius: 8px;
+    margin-right: 18px;
+    border: 2px solid #fff2;
+    background: #fff;
+}
+
+.product-info {
+    flex: 1;
+    color: #fff;
+}
+
+.product-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 6px;
+}
+
+.product-rating {
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.influencer-review {
+    font-style: italic;
+    color: #ccc;
+    margin-top: 8px;
+    border-left: 3px solid #fff;
+    padding-left: 12px;
+}
+
+footer {
+    background: #000;
+    color: #fff;
+    text-align: center;
+    padding: 18px 0 8px 0;
+    margin-top: 48px;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    border-top: 1px solid #fff2;
+}
+
+.copyright {
+    margin: 0;
+    color: #fff;
+    font-size: 1rem;
+    opacity: 0.7;
+}
+
+.auth-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin: 16px 32px 0 0;
+}
+.auth-buttons button {
+    background: #fff;
+    color: #000;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+.auth-buttons button:hover {
+    background: #ffd700;
+    color: #111;
+}
+.auth-container {
+    max-width: 350px;
+    margin: 60px auto;
+    background: #181818;
+    padding: 32px 24px;
+    border-radius: 12px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.18);
+    color: #fff;
+    text-align: center;
+}
+.auth-container input {
+    width: 90%;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #fff2;
+    background: #222;
+    color: #fff;
+    font-size: 1rem;
+}
+.auth-container button {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    background: #fff;
+    color: #000;
+    font-weight: 700;
+    border: none;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+.auth-container button:hover {
+    background: #ffd700;
+    color: #111;
+}
+.auth-container a {
+    color: #ffd700;
+    text-decoration: none;
+}
+
+.google-btn, .facebook-btn {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+    font-weight: 700;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.2s, color 0.2s;
+}
+.google-btn {
+    background: #fff;
+    color: #4285F4;
+    border: 1px solid #4285F4;
+}
+.google-btn:hover {
+    background: #4285F4;
+    color: #fff;
+}
+.facebook-btn {
+    background: #fff;
+    color: #1877f3;
+    border: 1px solid #1877f3;
+}
+.facebook-btn:hover {
+    background: #1877f3;
+    color: #fff;
+}
+.divider {
+    margin: 16px 0;
+    color: #aaa;
+    font-size: 1rem;
+    text-align: center;
+    position: relative;
+}
+.divider::before, .divider::after {
+    content: "";
+    display: inline-block;
+    width: 40%;
+    height: 1px;
+    background: #333;
+    vertical-align: middle;
+    margin: 0 8px;
+}
+
+@media (max-width: 700px) {
+    .product {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .product img {
+        margin-bottom: 12px;
+        margin-right: 0;
+    }
+    .auth-buttons {
+        justify-content: center;
+        margin: 16px 0 0 0;
+    }
+}
